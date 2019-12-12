@@ -1,7 +1,4 @@
 language: objective-c
 osx_image: xcode11.2
-xcode_scheme:
-- TVChannels
-- PresentationLayer
 script:
-    - xcodebuild clean test -project "TVChannels.xcodeproj" -destination "platform=tvOS Simulator,name=Apple TV 4K,OS=13.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+    - xcodebuild clean test -project "TVChannels.xcodeproj" -scheme "PresentationLayer" -destination "platform=tvOS Simulator,name=Apple TV 4K,OS=13.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
