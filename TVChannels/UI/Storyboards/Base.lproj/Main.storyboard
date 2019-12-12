@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="15702" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rrk-PL-dVl">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="f2E-Hd-1zA">
+            <objects>
+                <collectionViewController id="rrk-PL-dVl" customClass="MainViewController" customModule="TVChannels" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Vrr-bh-tI6">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="40" id="LwP-b0-L9f">
+                            <size key="itemSize" width="275" height="325"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="25" minY="25" maxX="25" maxY="25"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="rrk-PL-dVl" id="4T1-iR-dWy"/>
+                            <outlet property="delegate" destination="rrk-PL-dVl" id="Sjq-oA-fHA"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="tabBarObservedScrollView" destination="Vrr-bh-tI6" id="Kiz-aw-aBE"/>
+                        <segue destination="asf-tG-ZLM" kind="presentation" identifier="showDetail" destinationCreationSelector="createDetailVCWithCoder:sender:" id="dhl-ht-MlP"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buc-RV-b1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-102" y="1100"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="WF7-i2-lHq">
+            <objects>
+                <viewController id="asf-tG-ZLM" customClass="DetailViewController" customModule="TVChannels" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u3H-LU-AZL"/>
+                        <viewControllerLayoutGuide type="bottom" id="FlC-uO-8eq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m5t-Ca-t5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKz-jn-6mJ">
+                                <rect key="frame" x="760" y="153" width="400" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="R46-hd-Jcb"/>
+                                    <constraint firstAttribute="width" constant="400" id="RIV-K7-toS"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allegro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDP-Bg-ik0">
+                                <rect key="frame" x="844.5" y="653" width="231" height="91"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ7-6N-uMC">
+                                <rect key="frame" x="891.5" y="774" width="137" height="69"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pZ7-6N-uMC" firstAttribute="top" secondItem="pDP-Bg-ik0" secondAttribute="bottom" constant="30" id="3tw-IG-YJD"/>
+                            <constraint firstItem="pDP-Bg-ik0" firstAttribute="top" secondItem="nKz-jn-6mJ" secondAttribute="bottom" constant="100" id="GUR-pe-ffc"/>
+                            <constraint firstItem="pDP-Bg-ik0" firstAttribute="centerX" secondItem="nKz-jn-6mJ" secondAttribute="centerX" id="JyN-cJ-mZa"/>
+                            <constraint firstItem="nKz-jn-6mJ" firstAttribute="top" secondItem="u3H-LU-AZL" secondAttribute="bottom" constant="93" id="ZHq-on-kwE"/>
+                            <constraint firstItem="pZ7-6N-uMC" firstAttribute="centerX" secondItem="pDP-Bg-ik0" secondAttribute="centerX" id="cJA-uc-7iv"/>
+                            <constraint firstItem="nKz-jn-6mJ" firstAttribute="centerX" secondItem="m5t-Ca-t5Y" secondAttribute="centerX" id="cvZ-s7-yLl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circleContainerView" destination="nKz-jn-6mJ" id="VeL-Q5-idc"/>
+                        <outlet property="progressLabel" destination="pZ7-6N-uMC" id="dIg-EN-gUf"/>
+                        <outlet property="titleLabel" destination="pDP-Bg-ik0" id="lDX-Fu-hjA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iv5-FU-6Hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-102" y="2503"/>
+        </scene>
+    </scenes>
+</document>

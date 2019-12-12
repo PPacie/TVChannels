@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  TVChannels
+
+  Created by Pablo Paciello on 19/11/2019.
+  Copyright © 2019 Pablo Paciello. All rights reserved.
+*/
+
+"errorTitle" = "Error";
+"ok" = "Okay";
+"networkRequestFailed" = "Netzwerkanfrage fehlgeschlagen.";
+"retry" = "Wiederholen";
+"completed" = "abgeschlossen";
