@@ -1,7 +1,7 @@
 # TVChannels
 ![](https://img.shields.io/badge/platforms-tvOS-brightgreen.svg?style=flat)
 ![Swift 5.1](https://img.shields.io/badge/Swift-5.1-orange.svg) 
-![](https://api.travis-ci.org/PPacie/SwipingCarousel.svg?branch=master)
+![](https://api.travis-ci.org/PPacie/TVChannels.svg?branch=master)
 [![](https://img.shields.io/badge/twitter-@ppacie-blue.svg?style=flat)](https://twitter.com/ppacie) 
 ![license](https://img.shields.io/badge/license-MIT-brightgreen)
 
